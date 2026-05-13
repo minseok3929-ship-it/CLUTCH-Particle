@@ -1,0 +1,23 @@
+name: CLUTCH-Particle
+version: '${version}'
+main: com.clutch.particle.ClutchParticlePlugin
+api-version: '1.20'
+author: CLUTCH
+commands:
+  파티클:
+    description: 보유한 파티클 GUI를 엽니다.
+    usage: /파티클
+    permission: clutch.particle.use
+  파티클권:
+    description: 파티클 획득권을 생성합니다.
+    usage: /파티클권 생성 <파티클이름> <파티클타입> <색상> <개수>
+    permission: clutch.particle.admin
+permissions:
+  clutch.particle.admin:
+    description: 파티클 획득권을 생성할 수 있습니다.
+    default: op
+  clutch.particle.use:
+    description: 파티클권 사용 및 파티클 GUI 사용 권한입니다.
+    default: true
+libraries:
+  - org.xerial:sqlite-jdbc:3.45.3.0
